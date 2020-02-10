@@ -1,41 +1,116 @@
-.produto {
-  height: 200px;
-  background: blue;
+/* Estilos gerais referentes a todas as páginas*/
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.produto-2 {
+p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.btn {
+  border: 3px solid #fec63e;
+  padding: 10px 30px;
+  color: #fec63e;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+
+.btn:hover {
+  color: #fff;
+  border-color: #fff;
+}
+
+/* Header - Navbar*/
+/* Criação da colorimetria do navbar */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #fec63e; /* Amarelo padrão*/
+  padding: 15px 0;
+}
+
+/* Alinhando o bloco e menu a direita */
+.header_menu {
+  text-align: right;
+}
+
+/*ordenando o bloco de menu inline*/
+.header_menu ul li {
+  display: inline-block;
+  margin-left: 25px;
   margin-top: 20px;
 }
 
-div {
-  background: tomato;
+/*modificações nos links*/
+.header_menu ul li a {
+  color: #000;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 10px 0;
+  text-decoration: none;
 }
 
-/*ordenaçõa baseada em flexbox*/
-.flexbox {
-  width: 968px;
+/* Definindo cor par ao hover */
+.header_menu ul li a:hover {
+  color: #fff;
+}
+
+/* Intro - Index*/
+
+.introducao {
+  width: 100%;
+  height: 380px;
+  background: url("../img//bg.jpg");
+  background-size: cover;
+  margin-top: 96px;
+  text-align: center;
+  padding-top: 80px;
+}
+
+.introducao h1 {
+  font-size: 48px;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.quote-externo {
+  max-width: 320px;
   margin: 0 auto;
-  display: flex;
+  margin-bottom: 40px;
+  color: #fff;
 }
 
-.flexbox div {
-  flex: 1;
-  margin: 0 10px;
+.quote-externo p {
+  font-style: italic;
 }
 
-/*ordenação baseada em gridLayout*/
-
-.gridlayout {
-  width: 968px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  /*fr é o mesmo que unidade de fração definindo a quantidade de comulas*/
-  grid-gap: 2px;
-  /*define o gutter e espaço entre os itens*/
+/* Método paa adicionar um item via css, antes(before) ou depois(after) 
+do item antes definido o p(Usado para criar os separadores)*/
+.quote-externo p:before,
+.quote-externo p:after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #fff;
+  margin: 14px auto 10px auto;
 }
 
-.div5 {
-  grid-column: 2;
-  grid-row: 1;
+.quote-externo cite {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 0.1em;
 }
